@@ -1,4 +1,4 @@
-ul.navbar-v {
+ul.sidebar {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -10,18 +10,18 @@ ul.navbar-v {
 	height: 100%;
 }
 
-ul.navbar-v li a {
+ul.sidebar li a {
 	display: block;
 	color: #000;
 	padding: 8px 16px;
 	text-decoration: none;
 }
 
-ul.navbar-v li a:hover:not(.active) {
+ul.sidebar li a:hover:not(.active) {
 	background-color: #ddd;
 }
 
-ul.navbar-v .active {
+ul.sidebar .active {
 	background-color: #C00;
 	color: white;
 }
@@ -29,7 +29,7 @@ ul.navbar-v .active {
 
 /*****************************/
 
-ul.navbar-h {
+ul.navbar {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -38,37 +38,37 @@ ul.navbar-h {
 	overflow: hidden;
 }
 
-ul.navbar-h li{
+ul.navbar li{
 	float: left;
 }
 
-ul.navbar-h li a {
+ul.navbar li a {
 	display: block;
 	color: #000;
 	padding: 14px 16px;
 	text-decoration: none;
 }
 
-ul.navbar-h li a:hover:not(.active) {
+ul.navbar li a:hover:not(.active) {
 	background-color: #ddd;
 }
 
-ul.navbar-h .active {
+ul.navbar .active {
 	background-color: #C00;
 	color: white;
 }
 
-ul.navbar-h li.right {
+ul.navbar li.right {
 	float: right;
 }
 
-ul.navbar-h.fixed-top {
+ul.navbar.fixed-top {
 	position: fixed;
 	top: 0;
 	width: 100%;
 }
 
-ul.navbar-h.fixed-bottom {
+ul.navbar.fixed-bottom {
 	position: fixed;
 	bottom: 0;
 	width: 100%;
@@ -115,29 +115,32 @@ div.content {
 /* Mobile ********************************/
 
 @media screen and (max-width: 900px) {
-	ul.navbar-v {
-		width: 100%;
+	ul.sidebar {
+		width: auto;
 		height: auto;
 		position: relative;
+		overflow: hidden;
 	}
-	ul.navbar-v li > a {
+	ul.sidebar li {
 		float: left;
-		padding: 15px;
+	}
+	ul.sidebar li a {
+		padding: 14px 16px;
+	}
+	ul.sidebar li.right {
+		float: right;
 	}
 	div.content {margin-left: 0;}
-	li.dropdown {
-		display: block;
-	}
 }
 
 @media screen and (max-width: 400px) {
-	ul.navbar-v li a {
+	ul.sidebar li a {
 		text-align: center;
 		float: none;
 	}
 }
 
 @media screen and (max-width: 600px) {
-	ul.navbar-h li.right, 
-	ul.navbar-h li {float: none;}	
+	ul.navbar li.right, 
+	ul.navbar li {float: none;}	
 }
