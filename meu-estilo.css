@@ -74,6 +74,44 @@ ul.navbar.fixed-bottom {
 	width: 100%;
 }
 
+/** Conteudo **************************/
+
+div.content {
+	margin-left: 25%;
+	padding: 1px 20px;
+	height: 1000px;
+}
+
+/* Mobile ********************************/
+
+@media screen and (max-width: 900px) {
+	ul.sidebar {
+		width: auto;
+		height: auto;
+		position: static;
+		overflow: hidden;
+	}
+	ul.sidebar li {
+		float: left;
+	}
+	ul.sidebar li a {
+		padding: 14px 16px;
+	}
+	ul.sidebar li.right {
+		float: right;
+	}
+	div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 600px) {
+	ul.sidebar li.right, 
+	ul.sidebar li {float: none;}	
+}
+
+@media screen and (max-width: 600px) {
+	ul.navbar li.right, 
+	ul.navbar li {float: none;}	
+}
 
 /** Dropdown ****************************/
 
@@ -102,45 +140,4 @@ li.dropdown {
 
 .dropdown:hover .dropdown-content {
 	display: block;
-}
-
-/** Conteudo **************************/
-
-div.content {
-	margin-left: 25%;
-	padding: 1px 20px;
-	height: 1000px;
-}
-
-/* Mobile ********************************/
-
-@media screen and (max-width: 900px) {
-	ul.sidebar {
-		width: auto;
-		height: auto;
-		position: relative;
-		overflow: hidden;
-	}
-	ul.sidebar li {
-		float: left;
-	}
-	ul.sidebar li a {
-		padding: 14px 16px;
-	}
-	ul.sidebar li.right {
-		float: right;
-	}
-	div.content {margin-left: 0;}
-}
-
-@media screen and (max-width: 400px) {
-	ul.sidebar li a {
-		text-align: center;
-		float: none;
-	}
-}
-
-@media screen and (max-width: 600px) {
-	ul.navbar li.right, 
-	ul.navbar li {float: none;}	
 }
