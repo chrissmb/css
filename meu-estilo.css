@@ -5,9 +5,8 @@ ul.sidebar {
 	width: 25%;
 	background-color: #f3f3f3;
 	font-family: sans-serif;
-	position: fixed;
-	overflow: auto;
-	height: 100%;
+	position: static;
+	float: left;
 }
 
 ul.sidebar li a {
@@ -82,44 +81,15 @@ div.content {
 	height: 1000px;
 }
 
-/* Mobile ********************************/
 
-@media screen and (max-width: 900px) {
-	ul.sidebar {
-		width: auto;
-		height: auto;
-		position: static;
-		overflow: hidden;
-	}
-	ul.sidebar li {
-		float: left;
-	}
-	ul.sidebar li a {
-		padding: 14px 16px;
-	}
-	ul.sidebar li.right {
-		float: right;
-	}
-	div.content {margin-left: 0;}
-}
-
-@media screen and (max-width: 600px) {
-	ul.sidebar li.right, 
-	ul.sidebar li {float: none;}	
-}
-
-@media screen and (max-width: 600px) {
-	ul.navbar li.right, 
-	ul.navbar li {float: none;}	
-}
 
 /** Dropdown ****************************/
 
-li.dropdown {
+.navbar li.dropdown {
 	display: inline-block;
 }
 
-.dropdown-content {
+.navbar .dropdown-content {
 	display: none;
 	position: absolute;
 	background-color: #f9f9f9;
@@ -128,7 +98,7 @@ li.dropdown {
 	z-index: 1;
 }
 
-.dropdown-content a {
+.navbar .dropdown-content a {
 	color: black;
 	padding: 12px 16px;
 	display: block;
@@ -138,6 +108,49 @@ li.dropdown {
 
 .dropdown-content a:hover {background-color: #f1f1f1}
 
-.dropdown:hover .dropdown-content {
+.navbar .dropdown:hover .dropdown-content {
 	display: block;
+}
+
+.sidebar .dropdown-content {
+	background-color: #f9f9f9;
+	position: relative;
+	padding-left: 20px;
+}
+
+/* Mobile ********************************/
+
+@media screen and (max-width: 600px) {
+	ul.sidebar {
+		width: auto;
+		height: auto;
+		position: static;
+		overflow: hidden;
+		float: none;
+	}
+	ul.sidebar li {
+		float: left;
+	}
+	ul.sidebar li a {
+		padding: 14px 16px;
+	}
+	div.content {margin-left: 0;}
+	ul.sidebar li.right, 
+	ul.sidebar li {float: none;}
+	
+	ul.navbar li.right, 
+	ul.navbar li {float: none;}
+
+
+	.navbar li.dropdown {
+		display: inline;
+	}
+	.navbar .dropdown-content {
+		display: block;
+		background-color: #f9f9f9;
+		background-color: #f9f9f9;
+		position: relative;
+		padding-left: 20px;
+		box-shadow: none;
+	}
 }
