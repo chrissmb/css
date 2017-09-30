@@ -5,36 +5,155 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="meu-estilo.css">
+  <link rel="stylesheet" type="text/css" href="meu-estilo.css">
+  <script data-require="jquery@*" data-semver="3.1.1" 
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="script.js"></script>
 	
 	<title>Your Website</title>
 </head>
 
 <body>
-
-<ul class="navbar">
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li class="dropdown">
-    <a href="#">Dropdown</a>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-  </li>
-  <li class="right"><a href="#about">About</a></li>
-</ul>
-
-<div class="content">
-  <h2>Responsive Sidenav Example</h2>
-  <p>This example use media queries to transform the sidenav to a top navigation bar when the screen size is 900px or less.</p>
-  <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the navigation links.</p>
-  <p>You will learn more about media queries and responsive web design later in our CSS Tutorial.</p>
-  <h3>Resize the browser window to see the effect.</h3>
-</div>
-
+  <ul class="navbar">
+    <li>
+      <a class="active" href="#home">Home</a>
+    </li>
+    <li>
+      <a href="#news">News</a>
+    </li>
+    <li>
+      <a href="#contact">Contact</a>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)">Formulários</a>
+      <div class="dropdown-content" for="forms">
+        <a href="#linear">Linear</a>
+        <a href="#empilhado">Empilhado</a>
+        <a href="#alinhado">Alinhado</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)">Dropdown2</a>
+      <div class="dropdown-content" for="fake">
+        <a href="#">Item 1</a>
+        <a href="#">Item 2</a>
+        <a href="#">Item 3</a>
+      </div>
+    </li>
+    <li class="right">
+      <a href="#about">About</a>
+    </li>
+  </ul>
+  <div class="content">
+    <h2>Responsive Sidenav Example</h2>
+    <p>This example use media queries to transform the sidenav to a top navigation bar when the screen size is 900px or less.</p>
+    <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the navigation links.</p>
+    <p>You will learn more about media queries and responsive web design later in our CSS Tutorial.</p>
+    <h3>Resize the browser window to see the effect.</h3>
+    <input type="button" class="btn" value="Teste" />
+    <input type="button" class="btn primario" value="Teste" />
+    <input type="button" class="btn sucesso" value="Teste" />
+    <input type="button" class="btn erro" value="Teste" />
+    <input type="button" class="btn cuidado" value="Teste" />
+    <input type="button" class="btn secundario" value="Teste" />
+    <a class="btn primario" href="#">btn primario</a>
+    <table class="tabela hover">
+      <tbody>
+        <tr>
+          <th>#</th>
+          <th>Login</th>
+          <th>Grupo</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>joao</td>
+          <td>Adm</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>maria.pereira</td>
+          <td>Usuario</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Jose</td>
+          <td>Usuario</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2 id="linear">Formulario linear</h2>
+    <form class="formulario">
+      <input type="text" name="login" value="" placeholder="Login" />
+      <input type="email" name="email" value="" placeholder="E-mail" />
+      <label for="ativo">
+        <input type="checkbox" name="ativo" id="ativo" /> Ativo
+      </label>
+      <select name="sexo" id="sexo">
+        <option disabled="" selected="">Sexo:</option>
+        <option value="">M</option>
+        <option value="">F</option>
+      </select>
+      <input class="btn" type="button" name="botao" value="Confirmar" />
+    </form>
+    <h2 id="empilhado">Formulario empilhado</h2>
+    <form class="formulario empilhado">
+      <label for="nome">Nome</label>
+      <input type="text" name="nome" />
+      <label for="login">Login</label>
+      <input type="text" name="login" />
+      <label for="idade">Idade</label>
+      <input type="number" name="idade" />
+      <label for="email">E-mail</label>
+      <input type="email" name="email" />
+      <label for="data">Data</label>
+      <input type="datetime" name="data" />
+      <label for="ativo">
+        <input type="checkbox" name="ativo" /> Ativo
+      </label>
+      <label for="sexo">Sexo</label>
+      <select name="sexo">
+        <option value="">M</option>
+        <option value="">F</option>
+      </select>
+      <input class="btn" type="button" name="botao" value="Confirmar" />
+    </form>
+    <h2 id="alinhado">Formulario alinhado</h2>
+    <form class="formulario">
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" />
+      </div>
+      <div class="form-group">
+        <label for="login">Login</label>
+        <input type="text" name="login" />
+      </div>
+      <div class="form-group">
+        <label for="idade">Idade</label>
+        <input type="number" name="idade" />
+      </div>
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" name="email" />
+      </div>
+      <div class="form-group">
+        <label for="data">Data</label>
+        <input type="datetime" name="data" />
+      </div>
+      <div class="form-group">
+        <label for="ativo" class="checkbox-label">
+          <input type="checkbox" name="ativo" /> Ativo
+        </label>
+      </div>
+      <div class="form-group">
+        <label for="sexo">Sexo</label>
+        <select name="sexo">
+          <option value="">M</option>
+          <option value="">F</option>
+        </select>
+      </div>
+      <input class="btn" type="button" name="botao" value="Confirmar" />
+    </form>
+  </div>
 </body>
 
 </html>

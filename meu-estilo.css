@@ -1,156 +1,374 @@
-ul.sidebar {
+body {
+	font-family: sans-serif;
+  }
+  
+  
+  /* Sidebar ***************************************************/
+  
+  .sidebar {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	width: 25%;
-	background-color: #f3f3f3;
-	font-family: sans-serif;
-	position: static;
+	background-color: #eee;
+	position: fixed;
 	float: left;
-}
-
-ul.sidebar li a {
+	height: 100%;
+	overflow: auto;
+  }
+  
+  .sidebar a {
 	display: block;
 	color: #000;
 	padding: 8px 16px;
 	text-decoration: none;
-}
-
-ul.sidebar li a:hover:not(.active) {
-	background-color: #ddd;
-}
-
-ul.sidebar .active {
+  }
+  
+  .sidebar .active {
 	background-color: #C00;
 	color: white;
-}
-
-
-/*****************************/
-
-ul.navbar {
+  }
+  
+  .sidebar a:hover:not(.active) {
+	background-color: #ddd;
+  }
+  
+  /* Navbar ******************************************************/
+  
+  .navbar {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	font-family: sans-serif;
-	background-color: #f3f3f3;
+	background-color: #eee;
 	overflow: hidden;
-}
-
-ul.navbar li{
+  }
+  
+  .navbar li {
 	float: left;
-}
-
-ul.navbar li a {
+  }
+  
+  .navbar a {
 	display: block;
 	color: #000;
 	padding: 14px 16px;
 	text-decoration: none;
-}
-
-ul.navbar li a:hover:not(.active) {
+  }
+  
+  .navbar a:hover:not(.active) {
 	background-color: #ddd;
-}
-
-ul.navbar .active {
+  }
+  
+  .navbar .active {
 	background-color: #C00;
 	color: white;
-}
-
-ul.navbar li.right {
+  }
+  
+  .navbar .right {
 	float: right;
-}
-
-ul.navbar.fixed-top {
+  }
+  
+  .navbar.fixed-top {
 	position: fixed;
 	top: 0;
 	width: 100%;
-}
-
-ul.navbar.fixed-bottom {
+  }
+  
+  .navbar.fixed-bottom {
 	position: fixed;
 	bottom: 0;
 	width: 100%;
-}
-
-/** Conteudo **************************/
-
-div.content {
+  }
+  
+  
+  /* Conteudo ****************************************************/
+  
+  .content {
 	margin-left: 25%;
 	padding: 1px 20px;
-	height: 1000px;
-}
-
-
-
-/** Dropdown ****************************/
-
-.navbar li.dropdown {
+  }
+  
+  
+  /* Dropdown ****************************************************/
+  
+  .navbar li.dropdown {
 	display: inline-block;
-}
-
-.navbar .dropdown-content {
+  }
+  
+  .navbar .dropdown-content {
 	display: none;
 	position: absolute;
 	background-color: #f9f9f9;
 	min-width: 160px;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 	z-index: 1;
-}
-
-.navbar .dropdown-content a {
-	color: black;
+  }
+  
+  .navbar .dropdown-content a {
 	padding: 12px 16px;
 	display: block;
 	text-align: left;
 	text-decoration: none;
-}
-
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-.navbar .dropdown:hover .dropdown-content {
-	display: block;
-}
-
-.sidebar .dropdown-content {
+  }
+  
+  .dropdown-content a:hover:not(.active) {
+	background-color: #ddd
+  }
+  
+  
+  /*.navbar .dropdown:hover .dropdown-content {
+	  display: block;
+  }*/
+  
+  .sidebar .dropdown-content {
 	background-color: #f9f9f9;
 	position: relative;
-	padding-left: 20px;
-}
-
-/* Mobile ********************************/
-
-@media screen and (max-width: 600px) {
-	ul.sidebar {
-		width: auto;
-		height: auto;
-		position: static;
-		overflow: hidden;
-		float: none;
+	display: none;
+	-webkit-transition: height 2s;
+	-o-transition: height 2s;
+	-moz-transition: height 2s;
+  }
+  
+  .sidebar .dropdown-content a {
+	padding-left: 40px;
+  }
+  
+  /* Tabela **************************************************/
+  
+  .tabela {
+	border-collapse: collapse;
+	margin: 30px 0px;
+  }
+  
+  .tabela td {
+	border: solid #AAA;
+	border-width: 1px 0px;
+	padding: 8px;
+  }
+  
+  .tabela th {
+	border: solid #AAA;
+	border-width: 0px 0px 2px 0px;
+	padding: 8px;
+	text-align: left;
+  }
+  
+  .tabela.borda {
+	border: solid #AAA;
+	border-width: 1px;
+  }
+  
+  .tabela.borda td {
+	border-width: 1px 1px;
+  }
+  
+  .tabela.borda th {
+	border: solid #AAA;
+	border-width: 1px 1px 2px 1px;
+  }
+  
+  .tabela.centro,
+  .tabela.centro th {
+	text-align: center;
+  }
+  
+  .tabela.listra tr:nth-child(even) {
+	background-color: #F5F5F5;
+  }
+  
+  .tabela.hover tr:hover {
+	background-color: #F5F5F5;
+  }
+  
+  
+  /* Forms **************************************************/
+  
+  .formulario input:not([type]),
+  .formulario input[type=password],
+  .formulario input[type=email],
+  .formulario input[type=url],
+  .formulario input[type=date],
+  .formulario input[type=month],
+  .formulario input[type=time],
+  .formulario input[type=datetime],
+  .formulario input[type=datetime-local],
+  .formulario input[type=week],
+  .formulario input[type=tel],
+  .formulario input[type=color],
+  .formulario input[type=file],
+  .formulario input[type=number],
+  .formulario input[type=search],
+  .formulario input[type=text],
+  .formulario select {
+	margin: 10px 5px;
+	padding: 10px;
+	border-radius: 4px;
+	border: solid 1px #CCC;
+  }
+  
+  .formulario.empilhado input:not([type=checkbox]),
+  .formulario.empilhado select,
+  .formulario.empilhado label {
+	display: block;
+	margin: 10px 5px;
+  }
+  
+  .formulario .form-group label {
+	width: 50px;
+	text-align: right;
+	display: inline-block;
+	vertical-align: middle;
+  }
+  
+  .formulario .form-group .checkbox-label {
+	width: auto;
+	margin: 10px 0px 10px 60px;
+	display: block;
+	text-align: left;
+  }
+  
+  .formulario .form-group .checkbox-label input {
+	display: inline;
+  }
+  
+  
+  /* Botoes **************************************************/
+  
+  .btn {
+	margin: 5px;
+	padding: 8px 10px;
+	border-radius: 4px;
+	border: solid 1px #CCC;
+	text-decoration: none;
+	font-size: 16px;
+	display: inline-block;
+  }
+  
+  .btn:hover {
+	background: linear-gradient(#DDD, #CCC);
+  }
+  
+  .btn.primario {
+	background-color: #36F;
+	color: white;
+	font-weight: 100;
+	border-color: #36F;
+  }
+  
+  .btn.primario:hover {
+	background: linear-gradient(#36F, #13A);
+  }
+  
+  .btn.sucesso {
+	background-color: #0A0;
+	color: white;
+	font-weight: 100;
+	border-color: #0A0;
+  }
+  
+  .btn.sucesso:hover {
+	background: linear-gradient(#0A0, #080);
+  }
+  
+  .btn.erro {
+	background-color: #C00;
+	color: white;
+	font-weight: 100;
+	border-color: #C00;
+  }
+  
+  .btn.erro:hover {
+	background: linear-gradient(#C00, #900);
+  }
+  
+  .btn.cuidado {
+	background-color: #D60;
+	color: white;
+	font-weight: 100;
+	border-color: #D60;
+  }
+  
+  .btn.cuidado:hover {
+	background: linear-gradient(#D60, #C30);
+  }
+  
+  .btn.secundario {
+	background-color: #6AF;
+	color: white;
+	font-weight: 100;
+	border-color: #6AF;
+  }
+  
+  .btn.secundario:hover {
+	background: linear-gradient(#6AF, #37E);
+  }
+  
+  
+  /* Mobile **************************************************/
+  
+  @media screen and (max-width: 600px) {
+	.sidebar {
+	  width: auto;
+	  height: auto;
+	  position: static;
+	  overflow: hidden;
+	  float: none;
 	}
-	ul.sidebar li {
-		float: left;
+	.sidebar li {
+	  float: left;
 	}
-	ul.sidebar li a {
-		padding: 14px 16px;
+	.sidebar li a {
+	  padding: 14px 16px;
 	}
-	div.content {margin-left: 0;}
-	ul.sidebar li.right, 
-	ul.sidebar li {float: none;}
-	
-	ul.navbar li.right, 
-	ul.navbar li {float: none;}
-
-
+	.content {
+	  margin-left: 0;
+	}
+	.sidebar li.right,
+	.sidebar li {
+	  float: none;
+	}
+	.navbar li.right,
+	.navbar li {
+	  float: none;
+	}
 	.navbar li.dropdown {
-		display: inline;
+	  display: inline;
 	}
 	.navbar .dropdown-content {
-		display: block;
-		background-color: #f9f9f9;
-		background-color: #f9f9f9;
-		position: relative;
-		padding-left: 20px;
-		box-shadow: none;
+	  display: none;
+	  background-color: #f9f9f9;
+	  position: relative;
+	  box-shadow: none;
 	}
-}
+	.navbar .dropdown-content a {
+	  padding-left: 40px;
+	}
+	.formulario input:not([type]),
+	.formulario input[type=password],
+	.formulario input[type=email],
+	.formulario input[type=url],
+	.formulario input[type=date],
+	.formulario input[type=month],
+	.formulario input[type=time],
+	.formulario input[type=datetime],
+	.formulario input[type=datetime-local],
+	.formulario input[type=week],
+	.formulario input[type=tel],
+	.formulario input[type=color],
+	.formulario input[type=file],
+	.formulario input[type=number],
+	.formulario input[type=search],
+	.formulario input[type=text],
+	.formulario select {
+	  display: block;
+	}
+	.tabela {
+	  overflow: auto;
+	  display: block;
+	}
+	.formulario .form-group label {
+	  text-align: left;
+	}
+	.formulario .form-group .checkbox-label {
+	  margin: 10px 0px 10px 0px;
+	}
+  }
