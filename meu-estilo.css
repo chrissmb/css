@@ -280,14 +280,14 @@ body {
 	background: linear-gradient(#C00, #900);
   }
   
-  .btn.cuidado {
+  .btn.atencao {
 	background-color: #D60;
 	color: white;
 	font-weight: 100;
 	border-color: #D60;
   }
   
-  .btn.cuidado:hover {
+  .btn.atencao:hover {
 	background: linear-gradient(#D60, #C30);
   }
   
