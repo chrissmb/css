@@ -1,23 +1,12 @@
 # CSS Chris
 CSS com funcionalidades básicas.
 
-## Head
-
-```
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="meu-estilo.css">
-<script data-require="jquery@*" data-semver="3.1.1" 
-    src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="script.js"></script>
-```
-
 ## Navbar
 
 ```
 <ul class="navbar">
   <li>
-    <a class="active" href="#home">Home</a>
+    <a class="ativo" href="#home">Home</a>
   </li>
   <li>
     <a href="#news">News</a>
@@ -44,7 +33,7 @@ CSS com funcionalidades básicas.
 ```
 <ul class="sidebar">
   <li>
-    <a class="active" href="#home">Home</a>
+    <a class="ativo" href="#home">Home</a>
   </li>
   <li>
     <a href="#news">News</a>
@@ -67,6 +56,16 @@ CSS com funcionalidades básicas.
 <div class="content">
   Conteudo...
 </div>
+```
+## Navs
+
+```
+<ul class="nav"><!-- class="nav guia" ou class="nav pilula"-->
+  <li><a class="ativo" href="#">Tab 1</a></li>
+  <li><a href="#">Tab 2</a></li>
+  <li><a href="#">Tab 3</a></li>
+  <li><a href="#">Tab 4</a></li>
+</ul>
 ```
 
 ## Botões

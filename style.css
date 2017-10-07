@@ -24,12 +24,12 @@ body {
   text-decoration: none;
 }
 
-.sidebar .active {
+.sidebar .ativo {
   background-color: #C00;
   color: white;
 }
 
-.sidebar a:hover:not(.active) {
+.sidebar a:hover:not(.ativo) {
   background-color: #CCC;
 }
 
@@ -54,11 +54,11 @@ body {
   text-decoration: none;
 }
 
-.navbar a:hover:not(.active) {
+.navbar a:hover:not(.ativo) {
   background-color: #CCC;
 }
 
-.navbar .active {
+.navbar .ativo {
   background-color: #C00;
   color: white;
 }
@@ -79,6 +79,59 @@ body {
   width: 100%;
 }
 
+/* Navs ****************************************************/
+
+.nav {
+  list-style-type: none;
+  /*background-color: red;*/
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+}
+
+.nav li {
+  margin-bottom: -1px;
+}
+
+.nav a {
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+  color: #07f;
+}
+
+.nav .ativo {
+  color: black;
+}
+
+.nav a:hover:not(.ativo) {
+  color: #036;
+}
+
+.nav.guia {
+  border-bottom: solid thin #ddd;
+}
+
+.nav.guia a {
+  border: solid thin transparent;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.nav.guia a:hover:not(.ativo) {
+  border-color: #eee #eee #ddd;
+}
+
+.nav.guia .ativo {
+  border-color: #ddd #ddd white;
+  background: white;
+}
+
+.nav.pilula .ativo{
+  background-color: #07f;
+  color: white;
+  border-radius: 5px;
+}
 
 /* Conteudo ****************************************************/
 
@@ -113,7 +166,7 @@ body {
   text-decoration: none;
 }
 
-.dropdown-content a:hover:not(.active) {
+.dropdown-content a:hover:not(.ativo) {
   background-color: #ddd
 }
 
