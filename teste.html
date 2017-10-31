@@ -13,10 +13,10 @@
 <body>
   <ul class="navbar">
     <li>
-      <a class="ativo" href="#home">Home</a>
+      <a class="active" href="#home">Home</a>
     </li>
     <li>
-      <a href="#news">News</a>
+      <a class="disabled" href="#news">News</a>
     </li>
     <li>
       <a href="#contact">Contact</a>
@@ -25,7 +25,7 @@
       <a href="javascript:void(0)">Formulários</a>
       <div class="dropdown-content">
         <a href="#linear">Linear</a>
-        <a href="#empilhado">Empilhado</a>
+        <a href="#empilhado"class="active" >Empilhado</a>
         <a href="#alinhado">Alinhado</a>
       </div>
     </li>
@@ -41,12 +41,91 @@
       <a href="#about">About</a>
     </li>
   </ul>
-  <div class="content">
-    <h2>Responsive Sidenav Example</h2>
-    <p>This example use media queries to transform the sidenav to a top navigation bar when the screen size is 900px or less.</p>
-    <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the navigation links.</p>
-    <p>You will learn more about media queries and responsive web design later in our CSS Tutorial.</p>
-    <h3>Resize the browser window to see the effect.</h3>
+  <div class="content center">
+    <h2>Página de teste</h2>
+
+    Teste
+
+    <ul class="lista compacta">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li class="disabled">Item 3</li>
+      <li>Item 4</li>
+    </ul>
+
+    <a href="#" modal="modal1">Abrir modal</a>
+    <a href="#" modal="modal2">Abrir modal</a>
+
+    <div class="modal" id="modal1">
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+      Conteúdo dentro do modal 1.
+    </div>
+
+    <div class="modal" id="modal2">
+      <div class="modal-header">
+        Cabeçalho
+      </div>
+      <div class="modal-body">
+        Conteúdo dentro do modal 2.<br>
+        Conteúdo dentro do modal 2.<br>
+        Conteúdo dentro do modal 2.<br>
+        Conteúdo dentro do modal 2.<br>
+      </div>
+      <div class="modal-footer">
+        <button>Ok</button>
+      </div>
+    </div>
+    <br>
     <input type="button" class="btn" value="Teste" />
     <input type="button" class="btn primario" value="Teste" />
     <input type="button" class="btn sucesso" value="Teste" />
@@ -153,6 +232,7 @@
       <input class="btn" type="button" name="botao" value="Confirmar" />
     </form>
   </div>
+
 </body>
 
 </html>
