@@ -454,8 +454,6 @@ body {
 
 body.modal-aberto {
   overflow: hidden;
-  position: fixed;
-  width: 100%;
 }
 
 /* Lista **************************************************/

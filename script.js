@@ -1,4 +1,5 @@
 // Code goes here
+var scroll = 0;
 
 $(document).ready(function(){
 
@@ -37,13 +38,13 @@ $(document).ready(function(){
   }
 
   $("[modal]").click(function() {
-    var scrollPosition = $(window).scrollTop();
     var modal = $(this).attr("modal");
     var idModal = "#" + modal;
+    scroll = $(window).scrollTop();
     $(idModal).addClass("show");
     $(".modal-bg-black").addClass("show");
     $("body").addClass("modal-aberto");
-    $("modal-aberto").css("top", -(scrollPosition));
+    $(".modal-aberto").css("margin-top", -scroll);
    });
 
   $(".modal-bg-black,.fecha-modal").click(function() {
@@ -55,5 +56,7 @@ $(document).ready(function(){
 function fechaModal(){
   $(".modal-bg-black").removeClass("show");
   $(".modal").removeClass("show");
+  $(".modal-aberto").css("margin-top", "auto");
   $("body").removeClass("modal-aberto");
+  $(window).scrollTop(scroll);
 }
