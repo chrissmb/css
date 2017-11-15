@@ -569,8 +569,32 @@ body.modal-aberto {
     display: block;
   }
   .tabela {
-    overflow: auto;
     display: block;
+    overflow: auto;
+  }
+
+  .tabela.responsiva,
+  .tabela.responsiva tbody,
+  .tabela.responsiva tr {
+    display: block;
+    width: 100%;
+    overflow: visible;
+  }
+  .tabela.responsiva tr {
+    margin-bottom: 20px;
+  }
+  .tabela.responsiva th {
+    display: none;
+  }
+  .tabela.responsiva td {
+    display: block;
+    text-align: right;
+    margin-bottom: -1px;
+  }
+  .tabela.responsiva td:before {
+    content: attr(campo);
+    float: left;
+    font-weight: bold;
   }
   .formulario .form-group label {
     text-align: left;
