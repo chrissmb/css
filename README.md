@@ -4,7 +4,7 @@ CSS com funcionalidades básicas.
 ## Navbar
 
 ```html
-<ul class="navbar">
+<ul class="navbar"><!-- class="navbar [red] [green] [purple]"-->
   <li>
     <a class="ativo" href="#home">Home</a>
   </li>
