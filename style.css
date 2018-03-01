@@ -9,22 +9,37 @@ body {
   margin: 0;
   padding: 0;
   width: 25%;
-  background-color: #e7e7e7;
+  background-color: #48f;
   position: fixed;
   float: left;
   height: 100%;
   overflow: auto;
 }
 
+.sidebar.green {
+  background-color: #2ba;
+}
+
+.sidebar.red {
+  background-color: #f34;
+}
+
+.sidebar.purple {
+  background-color: #a6c;
+}
+
+.sidebar li {
+  padding: 10px;
+}
 .sidebar a {
   display: block;
-  color: #000;
-  padding: 8px 16px;
+  color: #fff;
+  padding: 10px;
   text-decoration: none;
 }
 
 .sidebar .active {
-  background-color: #c00;
+  background-color: rgba(255,255,255,.1);
   color: white;
 }
 
@@ -35,7 +50,7 @@ body {
 }
 
 .sidebar a:hover:not(.active) {
-  background-color: #ccc;
+  color: #ddd;;
 }
 
 /* Navbar ******************************************************/
@@ -44,27 +59,40 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  background-color: #e7e7e7;
+  background-color: #48f;
   overflow: hidden;
+}
+
+.navbar.green {
+  background-color: #2ba;
+}
+
+.navbar.red {
+  background-color: #f34;
+}
+
+.navbar.purple {
+  background-color: #a6c;
 }
 
 .navbar li {
   float: left;
+  padding: 10px;
 }
 
 .navbar a {
   display: block;
-  color: #000;
-  padding: 14px 16px;
+  color: #fff;
+  padding: 10px;
   text-decoration: none;
 }
 
 .navbar a:hover:not(.active) {
-  background-color: #ccc;
+  color: #ddd;
 }
 
 .navbar .active {
-  background-color: #c00;
+  background-color: rgba(255,255,255,.1);
   color: white;
 }
 
@@ -173,7 +201,8 @@ body {
 .navbar .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f0f0f0;
+  background-color: #fff;
+  border-radius: 5px;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
@@ -182,21 +211,29 @@ body {
   display: block;
 }
 
-.navbar .dropdown-content a {
+.dropdown-content a {
   padding: 12px 16px;
   display: block;
   text-align: left;
   text-decoration: none;
+  color: black;
+  margin: 2px;
+}
+
+.dropdown-content .active {
+  color: #48f;
 }
 
 .dropdown-content a:hover:not(.active) {
-  background-color: #ddd;
+  background-color: #eee;
+  color: black;
 }
 
 .sidebar .dropdown-content {
-  background-color: #f0f0f0;
+  background-color: #fff;
   position: relative;
   display: block;
+  border-radius: 5px;
   -webkit-transition: max-height 0.5s;
   -o-transition: max-height 0.5s;
   -moz-transition: max-height 0.5s;
@@ -520,8 +557,8 @@ body.modal-aberto {
   .navbar li {
     float: none;
   }
-  .navbar li.dropdown {
-    display: inline;
+  .navbar .dropdown {
+    display: list-item;
   }
   .navbar .dropdown-content {
     display: block;
@@ -572,7 +609,7 @@ body.modal-aberto {
     display: block;
     overflow: auto;
   }
-
+  
   .tabela.responsiva,
   .tabela.responsiva tbody,
   .tabela.responsiva tr {
