@@ -221,3 +221,13 @@ Modal:
   </div>
 </div>
 ```
+## Lista
+
+```html
+  <ul class="lista compacta">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li class="disabled">Item 3</li>
+    <li>Item 4</li>
+  </ul>
+```
