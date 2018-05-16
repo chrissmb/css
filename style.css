@@ -88,6 +88,7 @@ body {
   color: #fff;
   padding: 10px;
   text-decoration: none;
+  font-weight: 100;
 }
 
 .navbar a:hover:not(.active) {
@@ -317,27 +318,57 @@ body {
 
 /* Forms **************************************************/
 
-.formulario input:not([type]),
-.formulario input[type="password"],
-.formulario input[type="email"],
-.formulario input[type="url"],
-.formulario input[type="date"],
-.formulario input[type="month"],
-.formulario input[type="time"],
-.formulario input[type="datetime"],
-.formulario input[type="datetime-local"],
-.formulario input[type="week"],
-.formulario input[type="tel"],
-.formulario input[type="color"],
-.formulario input[type="file"],
-.formulario input[type="number"],
-.formulario input[type="search"],
-.formulario input[type="text"],
-.formulario select {
+input:not([type]),
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="week"],
+input[type="tel"],
+input[type="color"],
+input[type="file"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+select,
+.custom-file label {
   margin: 10px 5px;
   padding: 10px;
   border-radius: 4px;
   border: solid 1px #ccc;
+}
+
+.custom-file {
+  position: relative;
+  display: inline-block;
+  width: 292px;
+}
+.custom-file input[type="file"] {
+  opacity: 0;
+  position: relative;
+  z-index: 2;
+  width: 292px;
+}
+
+.custom-file label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 292px;
+}
+
+.custom-file label:after {
+  position: absolute;
+  content: "Escolher";
+  padding: 10px;
+  border-left: solid 1px #ccc;
+  top: 0;
+  right: 0;
+  background-color: #e9ecef;
 }
 
 .formulario.empilhado input:not([type="checkbox"]),
