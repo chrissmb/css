@@ -231,3 +231,10 @@ Modal:
   <li>Item 4</li>
 </ul>
 ```
+## Custom File
+
+```html
+  <div class="custom-file">
+    <input type="file" />
+  </div>
+```
